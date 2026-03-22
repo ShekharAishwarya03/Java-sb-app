@@ -19,6 +19,10 @@ steps:
     sonarQubeRunAnalysis: false
     goals: "package"
 
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'java-sb-app'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
